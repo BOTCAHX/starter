@@ -11,8 +11,7 @@ function start(cmd) {
 		stdio: ['inherit', 'inherit', 'inherit', 'ipc']
 	})
 };
-start('clear')
+//start('clear')
 start('bash')
-/**hapus ini bila perlu :v
 console.log('Terminal Ready To Use!')
-**/
+
