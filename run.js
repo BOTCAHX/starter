@@ -13,4 +13,6 @@ function start(cmd) {
 };
 start('clear')
 start('bash')
+/**hapus ini bila perlu :v
 console.log('Terminal Ready To Use!')
+**/
