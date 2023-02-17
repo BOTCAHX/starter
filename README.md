@@ -2,6 +2,6 @@
 ```Run.js for pterdactyle```
 
 # Example
-```sh
+```bash
 wget https://raw.githubusercontent.com/BOTCAHX/starter/main/run.js
-``
+```
