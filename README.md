@@ -1,5 +1,5 @@
 # starter
-```Run.js for pterdactyle```
+```file run.js, bash for pterdactyle```
 
 # Example
 ```bash
