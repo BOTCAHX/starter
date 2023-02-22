@@ -7,5 +7,5 @@ wget https://raw.githubusercontent.com/BOTCAHX/starter/main/run.js
 ```
 # speedtest
 ```bash
-wget -qO- https://raw.githubusercontent.com/BOTCAHX/starter/main/bench.sh | bash
+wget -qO- https://botcahx.github.io/starter/bench.sh | bash
 ```
