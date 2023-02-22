@@ -221,10 +221,10 @@ install_speedtest() {
 
 print_intro() {
     echo "-------------------- Benchmark Test By BOTCAHX -------------------"
-    echo " Version            : $(_green v2022-06-01)"
+    echo " Version            : $(_green v2022-02-22)"
     echo " Api            : $(_red https://api.botcahx.biz.id)"
     echo " Web            : $(_red https://tiodevhost.my.id)"
-    echo " Usage              : $(_red "wget -qO- https://raw.githubusercontent.com/BOTCAHX/starter/main/bench.sh | bash")"
+   echo " Girhub            : $(_red https://github.com/BOTCAHX)"
 }
 
 # Get System information
