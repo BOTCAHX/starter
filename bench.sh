@@ -1,13 +1,4 @@
-#!/usr/bin/env bash
-#
-# Description: A Bench Script by Teddysun
-# recode by BOTCAHX 
-#
-# Copyright (C) 2015 - 2022 Teddysun <i@teddysun.com>
-# Thanks: LookBack <admin@dwhd.org>
-# URL: https://teddysun.com/444.html
-# https://github.com/teddysun/across/blob/master/bench.sh
-#
+
 trap _exit INT QUIT TERM
 
 _red() {
@@ -40,7 +31,7 @@ _exists() {
 }
 
 _exit() {
-    _red "\nThe script has been terminated.\n"
+    _red "\nSkrip telah dihentikan.\n"
     # clean up
     rm -fr speedtest.tgz speedtest-cli benchtest_*
     exit 1
@@ -72,6 +63,7 @@ speed_test() {
 
 speed() {
     speed_test '' 'Speedtest.net'
+    speed_test '7582' 'PT. Telekomunikasi, ID'
     speed_test '21541' 'Los Angeles, US'
     speed_test '43860' 'Dallas, US'
     speed_test '40879' 'Montreal, CA'
@@ -178,16 +170,16 @@ ipv4_info() {
     local country="$(wget -q -T10 -O- ipinfo.io/country)"
     local region="$(wget -q -T10 -O- ipinfo.io/region)"
     if [[ -n "$org" ]]; then
-        echo " Organization       : $(_blue "$org")"
+        echo " Organisasi       : $(_blue "$org")"
     fi
     if [[ -n "$city" && -n "country" ]]; then
-        echo " Location           : $(_blue "$city / $country")"
+        echo " Lokasi           : $(_blue "$city / $country")"
     fi
     if [[ -n "$region" ]]; then
-        echo " Region             : $(_yellow "$region")"
+        echo " Wilayah             : $(_yellow "$region")"
     fi
     if [[ -z "$org" ]]; then
-        echo " Region             : $(_red "No ISP detected")"
+        echo " Wilayah             : $(_red "No ISP detected")"
     fi
 }
 
@@ -219,18 +211,20 @@ install_speedtest() {
         wget --no-check-certificate -q -T10 -O speedtest.tgz ${url1}
         if [ $? -ne 0 ]; then
             wget --no-check-certificate -q -T10 -O speedtest.tgz ${url2}
-            [ $? -ne 0 ] && _red "Error: Failed to download speedtest-cli.\n" && exit 1
+            [ $? -ne 0 ] && _red "Error: Gagal mengunduh speedtest-cli.\n" && exit 1
         fi
         mkdir -p speedtest-cli && tar zxf speedtest.tgz -C ./speedtest-cli && chmod +x ./speedtest-cli/speedtest
         rm -f speedtest.tgz
     fi
-    printf "%-18s%-18s%-20s%-12s\n" " Node Name" "Upload Speed" "Download Speed" "Latency"
+    printf "%-18s%-18s%-20s%-12s\n" " Nama Node" "Kecepatan mengunggah" "Unduh Kecepatan" "Latensi"
 }
 
 print_intro() {
-    echo "-------------------- A Bench.sh Recode By BOTCAHX -------------------"
+    echo "-------------------- Benchmark Test By BOTCAHX -------------------"
     echo " Version            : $(_green v2022-06-01)"
-    echo " Usage              : $(_red "wget -qO- bench.sh | bash")"
+    echo " Api            : $(_red https://api.botcahx.biz.id)"
+    echo " Web            : $(_red https://tiodevhost.my.id)"
+    echo " Usage              : $(_red "wget -qO- https://raw.githubusercontent.com/BOTCAHX/starter/main/bench.sh | bash")"
 }
 
 # Get System information
@@ -341,16 +335,16 @@ print_end_time() {
     if [ ${time} -gt 60 ]; then
         min=$(expr $time / 60)
         sec=$(expr $time % 60)
-        echo " Finished in        : ${min} min ${sec} sec"
+        echo " Selesai dalam      : ${min} min ${sec} sec"
     else
-        echo " Finished in        : ${time} sec"
+        echo " Selesai dalam      : ${time} sec"
     fi
     date_time=$(date '+%Y-%m-%d %H:%M:%S %Z')
-    echo " Timestamp          : $date_time"
+    echo " Stempel waktu          : $date_time"
 }
 
-! _exists "wget" && _red "Error: wget command not found.\n" && exit 1
-! _exists "free" && _red "Error: free command not found.\n" && exit 1
+! _exists "wget" && _red "Kesalahan: perintah wget tidak ditemukan.\n" && exit 1
+! _exists "free" && _red "Kesalahan: perintah gratis tidak ditemukan.\n" && exit 1
 start_time=$(date +%s)
 get_system_info
 check_virt
