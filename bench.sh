@@ -31,7 +31,7 @@ _exists() {
 }
 
 _exit() {
-    _red "\nSkrip telah dihentikan.\n"
+    _red "\nScript telah dihentikan.\n"
     # clean up
     rm -fr speedtest.tgz speedtest-cli benchtest_*
     exit 1
@@ -222,9 +222,9 @@ install_speedtest() {
 print_intro() {
     echo "-------------------- Benchmark Test By BOTCAHX -------------------"
     echo " Version            : $(_green v2022-02-22)"
-    echo " Api            : $(_red https://api.botcahx.biz.id)"
-    echo " Web            : $(_red https://tiodevhost.my.id)"
-   echo " Girhub            : $(_red https://github.com/BOTCAHX)"
+    echo " Api                 : $(_red https://api.botcahx.biz.id)"
+    echo " Web               : $(_red https://tiodevhost.my.id)"
+   echo " Github              : $(_red https://github.com/BOTCAHX)"
 }
 
 # Get System information
