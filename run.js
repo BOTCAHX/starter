@@ -49,7 +49,7 @@ caption +=`
 • Memory : ${format(used)}/${format(total)} 
 • Uptime : ${uptime}
 
-\n\n[$]
+Type Command:~$
 `
 return log(caption)
 }
