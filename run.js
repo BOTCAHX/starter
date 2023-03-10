@@ -10,14 +10,14 @@ stdio: ['inherit', 'inherit', 'inherit', 'ipc']
 })
 }
 start('clear')
-console.log("Installing modules....")
+console.log("Installing Modules....")
 var botcahx = exec('npm i systeminformation && npm i chalk@4.1.2 && npm i cfonts', (error, stdout, stderr) => {
 console.log("Done....")
 async function show(format) {
-const chalk = require('chalk');
-const log = console.log;
-const si = require('systeminformation');
-const cfont = require("cfonts")
+var chalk = require('chalk');
+var log = console.log;
+var si = require('systeminformation');
+var cfont = require("cfonts")
 var OsInfo = await si.osInfo()
 var System = await si.system()
 var Cpu = await si.cpu()
@@ -44,7 +44,7 @@ say('BOTCAHX', {
 })
 let caption =`Instagram : @prm2.0\nWhatsapp : 082221792667\n`
 caption +=`
-• Os: ${distro} ${arch}
+• Os : ${distro} ${arch}
 • Cpu : ${manufacturer} ${brand}
 • Memory : ${format(used)}/${format(total)} 
 • Uptime : ${uptime}
