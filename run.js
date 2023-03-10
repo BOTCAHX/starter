@@ -46,7 +46,7 @@ let caption =`Instagram : @prm2.0\nWhatsapp : 082221792667\n`
 caption +=`
 • Os : ${distro} ${arch}
 • Cpu : ${manufacturer} ${brand}
-• Memory : ${format(used)}/${format(total)} 
+• Memory : ${format(active)}/${format(total)} 
 • Uptime : ${uptime}
 
 Type Command:~$
