@@ -18,12 +18,12 @@ const chalk = require('chalk');
 const log = console.log;
 const si = require('systeminformation');
 const cfont = require("cfonts")
-let OsInfo = await si.osInfo()
-let System = await si.system()
-let Cpu = await si.cpu()
-let Mem =  await si.mem()
-const { say } = cfont
-const os = require('os');  
+var OsInfo = await si.osInfo()
+var System = await si.system()
+var Cpu = await si.cpu()
+var Mem =  await si.mem()
+var { say } = cfont
+var os = require('os');  
 var ut_sec = os.uptime(); 
 var ut_min = ut_sec/60; 
 var ut_hour = ut_min/60; 
@@ -33,10 +33,10 @@ ut_hour = Math.floor(ut_hour);
 ut_hour = ut_hour%60; 
 ut_min = ut_min%60; 
 ut_sec = ut_sec%60; 
-let uptime = ut_hour + " Jam, "  + ut_min + " Menit, " + ut_sec + " Detik"
-let {platform,distro,release,codename,kernel,arch,hostname,fqdn,codepage,logofile} = OsInfo
-let { manufacturer,brand,vendor,family,model,stepping,revision,voltage,speed,speedMin,speedMax,governor,cores,physicalCores,processors} = Cpu
-let { total,free,used,active,available,buffers,cached,slab,buffcache} = Mem
+var uptime = ut_hour + " Jam, "  + ut_min + " Menit, " + ut_sec + " Detik"
+var {platform,distro,release,codename,kernel,arch,hostname,fqdn,codepage,logofile} = OsInfo
+var { manufacturer,brand,vendor,family,model,stepping,revision,voltage,speed,speedMin,speedMax,governor,cores,physicalCores,processors} = Cpu
+var { total,free,used,active,available,buffers,cached,slab,buffcache} = Mem
 say('BOTCAHX', {
   font: 'pallet',
   align: 'left',
@@ -49,7 +49,7 @@ teks +=`
 • Memory : ${format(used)}/${format(total)} 
 • Uptime : ${uptime}
 
-Terminal Sudah siap, silahkan ketik command file mu di bawah
+Terminal is ready to use, please type the command 
 
 `
 return log(teks)
