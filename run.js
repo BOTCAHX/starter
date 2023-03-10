@@ -43,14 +43,13 @@ say('BOTCAHX', {
   colors: ['green', 'magenta']
 })
 let caption =`Instagram : @prm2.0\nWhatsapp : 082221792667\n`
-teks +=`
+caption +=`
 • Os: ${distro} ${arch}
 • Cpu : ${manufacturer} ${brand}
 • Memory : ${format(used)}/${format(total)} 
 • Uptime : ${uptime}
 
-Terminal is ready to use, please type the command 
-
+\n\n[$]
 `
 return log(caption)
 }
