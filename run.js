@@ -42,7 +42,7 @@ say('BOTCAHX', {
   align: 'left',
   colors: ['green', 'magenta']
 })
-let teks =`Instagram : @prm2.0\nWhatsapp : 082221792667\n`
+let caption =`Instagram : @prm2.0\nWhatsapp : 082221792667\n`
 teks +=`
 • Os: ${distro} ${arch}
 • Cpu : ${manufacturer} ${brand}
@@ -52,15 +52,15 @@ teks +=`
 Terminal is ready to use, please type the command 
 
 `
-return log(teks)
+return log(caption)
 }
 show(formatBytes)
 function formatBytes(bytes, decimals = 2) {
     if (!+bytes) return '0 Bytes'
-    const k = 1024
-    const dm = decimals < 0 ? 0 : decimals
-    const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']
-    const i = Math.floor(Math.log(bytes) / Math.log(k))
+    var k = 1024
+    var dm = decimals < 0 ? 0 : decimals
+    var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']
+    var i = Math.floor(Math.log(bytes) / Math.log(k))
     return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`
 }
         })
