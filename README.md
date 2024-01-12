@@ -1,2 +1,2 @@
 # STARTER
-```file bash, bash for pterodactyl```
+```file starter, bash for pterodactyl```
