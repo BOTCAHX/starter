@@ -10,7 +10,7 @@ function start(cmd) {
 	})
 }
 
-start('clear')
+//start('clear')
 
 start('bash')
 
